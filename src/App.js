@@ -9,8 +9,8 @@ import Budget from './components/Budget';
 import Remaining from './components/Remaining'
 import ExpenseTotal from './components/ExpenseTotal'
 import ExpenseList from './components/ExpenseList'
-import ExpenseItem from './components/ExpenseItem'
 import AllocationForm from './components/AllocationForm'
+import Currency from './components/Currency'
 
 
 import { AppProvider } from './context/AppContext';
@@ -19,12 +19,16 @@ const App = () => {
         <AppProvider>
             <div className='container'>
                 <h1 className='mt-3'>Company's Budget Allocation</h1>
-                <div className='row mt-3'>
+                <div className='row mt-3' align="center">
                     {/* Add Budget component here under */}
-                    <div className='col-sm'>
+                    <div className='col-sm-3'>
                         <Budget/>
                     </div>        
-
+                    <div className='col-sm' align='center'>
+                        <Currency/>
+                    </div>        
+                {/* </div>
+                <div className='row mt-3'> */}
                     {/* Add Remaining component here under */}
                     <div className='col-sm'>
                         <Remaining/>        
@@ -33,7 +37,7 @@ const App = () => {
                     {/* Add ExpenseTotal component here under */}
                     <div className='col-sm'>
                         <ExpenseTotal/>
-                    </div>        
+                    </div>
                 </div>
                 <h3 className='mt-3'>Allocation</h3>
                 <div className='row'>
@@ -43,9 +47,6 @@ const App = () => {
                     </div>         
 
                     {/* Add ExpenseItem component here under */}
-                    {/* <div className='col-sm'>
-                        <ExpenseItem/>
-                    </div> */}
                 </div>        
                 <h3 className='mt-3'>Change Allocation</h3>
                 <div className='row mt-3'>
